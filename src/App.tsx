@@ -32,7 +32,7 @@ const router = createBrowserRouter([
       { path: "authors", element: <Authors /> },
       { path: "create", element: <CreatePost /> },
       { path: "posts/users/:id", element: <BlogPost /> },
-      { path: "myposts/:id", element: <Dashboard /> },
+      { path: "myposts", element: <Dashboard /> },
       { path: "posts/:id/delete", element: <DeletePost /> },
       { path: "posts/:id/edit", element: <EditPost /> },
       { path: "logout", element: <Logout /> },
@@ -40,12 +40,10 @@ const router = createBrowserRouter([
   },
 ]);
 
-function App() {
+export default function App() {
   return (
     <>
       <RouterProvider router={router} />
     </>
   );
 }
-
-export default App;
